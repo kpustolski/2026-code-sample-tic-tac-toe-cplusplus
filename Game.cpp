@@ -46,7 +46,7 @@ bool Game::playerTurn(Player &player)
     cout << "----------------------" << endl;
 
     game_board.printBoard();
-    
+
     cout << endl;
     cout << player.Name << ", please choose a space: ";
     cin >> raw_player_choice;
@@ -69,6 +69,7 @@ bool Game::playerTurn(Player &player)
         if (did_win)
         {
             game_board.printBoard();
+            cout << endl;
             cout << player.Name << " won! Good Game!" << endl;
             return did_win;
         }
@@ -82,6 +83,7 @@ bool Game::checkForTie(bool didWin, bool areAllCellsOwned)
     if (areAllCellsOwned && !didWin)
     {
         game_board.printBoard();
+        cout << endl;
         cout << "It's a draw!" << endl;
         return true;
     }
