@@ -1,4 +1,4 @@
-#include "GameBoard.h"
+#include "../include/GameBoard.h"
 
 GameBoard::GameBoard() {}
 
