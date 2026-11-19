@@ -1,9 +1,12 @@
 #include <iostream>
+#include "GameManager.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello world" << endl;
+    GameManager gameManager {};
+    gameManager.startGame();
+
     return 0;
 }
