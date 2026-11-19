@@ -6,6 +6,9 @@ void GameManager :: startGame()
 {
     bool stop_playing = false;
 
+    // Keep looping through tic tac toe games
+    // until the player decides they don't want to play
+    // another game anymore.
     while (!stop_playing)
     {
         Game current_game {TOTAL_ROWS, TOTAL_COLUMNS};

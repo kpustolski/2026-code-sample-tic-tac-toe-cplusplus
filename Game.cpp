@@ -91,11 +91,14 @@ bool Game::checkForTie(bool didWin, bool areAllCellsOwned)
     return false;
 }
 
+// Helper for trimming white space since C++
+// doesn't have a '.trim()' option for strings.
 string Game::trimWhiteSpace(const string &rawString)
 {
     size_t begin = rawString.find_first_not_of(WHITESPACE);
     size_t end = rawString.find_last_not_of(WHITESPACE);
-
+    // Start at the index where the first non-whitespace is found.
+    // Extract (end - begin + 1) number of letters and store in 'result'.
     string result = {rawString.substr(begin, end - begin + 1)};
     return result;
 }
